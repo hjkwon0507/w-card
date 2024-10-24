@@ -1,11 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import useFetchApplicationForm from "../hooks/useFetchApplicationForm";
 
 export default function Home() {
+  const { path } = useParams();
+  
+  const { data: application_form, loading, error } = useFetchApplicationForm(path);
+        
   return (
     <div>
-      <h1>Home</h1>
-      <Link to="/create">Create</Link>
+      {loading && <p>Loading...</p>}
+      {error && <p>{error.message}</p>}
+      {application_form && (
+        <div>
+          <h2>{application_form[0].path}</h2>
+          <p>type: {application_form[0].type}</p>
+          <p>{application_form[0].event_date} {application_form[0].event_time}</p>
+          <p>{application_form[0].address}</p>
+          <p>{application_form[0].place}</p>
+          <p style={{ whiteSpace: 'pre-line' }}>{application_form[0].phrase}</p>
+        </div>
+      )}
     </div>
   );
 }

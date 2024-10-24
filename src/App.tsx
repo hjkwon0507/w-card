@@ -7,7 +7,7 @@ import Create from './pages/Create';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path=":path" element={<Home />} />
       <Route path="/create/:hashId" element={<Create />} />
     </Routes>
   );
