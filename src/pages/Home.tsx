@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import useFetchApplicationForm from "../hooks/useFetchApplicationForm";
+import useFetchApplicationForm from "../hooks/useFetchApplicationForm.tsx";
 
 export default function Home() {
   const { path } = useParams();

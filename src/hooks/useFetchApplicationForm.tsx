@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../utils/SupabaseClient'; 
+import { supabase } from '../utils/SupabaseClient.ts'; 
 import { PostgrestError } from '@supabase/supabase-js';
 
 function useFetchApplicationForm(path: string | undefined) {
