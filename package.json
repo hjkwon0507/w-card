@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@supabase/postgrest-js": "^1.16.3",
     "@supabase/supabase-js": "^2.45.6",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.113",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "react": "^18.3.1",
@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^22.7.9",
     "@types/react-router-dom": "^5.3.3"
   }
 }

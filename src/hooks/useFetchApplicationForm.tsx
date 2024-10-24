@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../utils/SupabaseClient'; 
-import { PostgrestError } from '@supabase/postgrest-js';
+import { PostgrestError } from '@supabase/supabase-js';
 
 function useFetchApplicationForm(path: string | undefined) {
   const [data, setData] = useState<any[] | null>(null);
