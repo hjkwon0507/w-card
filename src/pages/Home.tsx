@@ -9,7 +9,7 @@ export default function Home() {
         
   return (
     <div>
-      {loading && <p>Loading...</p>}
+      {loading && <p>Loading..</p>}
       {error && <p>{error.message}</p>}
       {application_form && (
         <div>
